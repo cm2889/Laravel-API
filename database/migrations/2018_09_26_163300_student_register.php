@@ -310,10 +310,10 @@ class StudentRegister extends Migration
         */
         Schema::connection('mysql')->create('_z_country', function (Blueprint $table) {
             $table->increments('id', true)->unsigned();
-            $table->string('iso', 6)->unique();
+            $table->string('iso', 6);
             $table->string('name', 99)->default('');
             $table->string('dname', 99)->default('');
-            $table->string('iso3', 9)->unique();
+            $table->string('iso3', 9);
             $table->integer('position')->unsigned();
             $table->smallInteger('numcode');
             $table->mediumInteger('phonecode');
